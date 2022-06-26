@@ -38,9 +38,9 @@ flatpickr(date, {
 button.addEventListener('click', onClickStart);
 
 function onClickStart() {
+  date.disabled = true;
+  button.disabled = true;
   timerId = setInterval(() => {
-    date.disabled = true;
-    button.disabled = true;
     const choosenDate = new Date(date.value);
     const timeToFinish = choosenDate - Date.now();
 
